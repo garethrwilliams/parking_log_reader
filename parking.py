@@ -30,6 +30,8 @@ for line in file.readlines():
         in_time = datetime.strptime(vehicle_data['IN/OUT'][event_ref]['IN']['date'], "%Y-%m-%d %H:%M:%S.%f")
         out_time = datetime.strptime(vehicle_data['IN/OUT'][event_ref]['OUT']['date'], "%Y-%m-%d %H:%M:%S.%f")
         vehicle_data['TOTAL'].append(out_time - in_time)
+
+file.close()
         
 
 def average_time ():
